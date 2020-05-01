@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Follow Me On</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <style>
+      *{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+
+body{
+  background: linear-gradient(to top, #ff008a,#101c25);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    /* padding-top: 30px; */
+}
+/* .vs {
+  padding-bottom: 18%;
+    font-size: 2em;
+    color: rgb(233, 0, 0);
+  } */
+
+.social-buttons a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+.social-buttons a::before{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg,#f3550c,#c0df14);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(to top, #ff3c00,#ffff1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+.buttons a{
+  padding-top: 20%;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #fc06c6,#fa5c00);
+    animation: animate 5s linear infinite;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <!-- <h1 class="vs">😊Please Follow Me On😊</h1> -->
+    <div class="social-buttons">
+      <a href="https://github.com/vinayakz" target="blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/vinayakzutti/" target="blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://vinayakz.wordpress.com/" target="blank"><i class="fab fa-wordpress"></i></a>
+      <a href="https://in.linkedin.com/in/vinayak-zutti-a505b1134" target="blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://profiles.wordpress.org/vinayakz/" target="blank"><i class="fab fa-wordpress"></i></a>
+      <a href="https://www.facebook.com/vinoo160496" target="blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.google.com/search?q=vinayak+zutti&rlz=1C1CHBD_enIN855IN855&oq=vinayak+z&aqs=chrome.1.69i57j35i39j0l3j69i60l3.12624j0j7&sourceid=chrome&ie=UTF-8" target="blank"><i class="fab fa-google"></i></a>
+    <br/><br/>
+    <div class="footer" style="color:black; font-size: larger; ">Made with ❤️ By Vinayak Z.</div>
+</body>
+</html>
+
