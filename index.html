@@ -1,382 +1,1042 @@
-
 <!DOCTYPE html>
-<html class="gr__themes_lbarrow_com" lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Vinayak Zutti</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="description" content="Vinayak Zutti">
-    <link rel="icon" href="vinayak.JPG" type="image/gif" sizes="16x16">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="all" href="styles/plain.css">
-    <link rel="stylesheet" media="all" href="styles/style.css">
-    <!-- /Styles -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<script src="styles/prompt.js"></script>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevOps Architect | AWS Cloud Infrastructure Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#111414",
+                    "surface-container-high": "#282a2b",
+                    "tertiary-fixed-dim": "#9cd1c5",
+                    "on-background": "#e1e3e3",
+                    "inverse-primary": "#535f70",
+                    "secondary-fixed": "#d0e4ff",
+                    "surface-container-highest": "#333536",
+                    "outline-variant": "#44474c",
+                    "surface-variant": "#333536",
+                    "secondary": "#ff8c00",
+                    "on-error": "#690005",
+                    "primary-fixed": "#d7e3f7",
+                    "on-surface-variant": "#c5c6cc",
+                    "secondary-container": "#0274bc",
+                    "primary": "#bbc7db",
+                    "error": "#ffb4ab",
+                    "error-container": "#93000a",
+                    "on-primary": "#253140",
+                    "on-secondary-fixed-variant": "#00497a",
+                    "outline": "#8e9196",
+                    "secondary-fixed-dim": "#ff8c00",
+                    "on-primary-container": "#8a97a9",
+                    "on-surface": "#e1e3e3",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#6c9f95",
+                    "surface-tint": "#bbc7db",
+                    "tertiary-fixed": "#b7ede1",
+                    "surface-container": "#1d2020",
+                    "on-secondary": "#003256",
+                    "surface-container-lowest": "#0c0f0f",
+                    "primary-fixed-dim": "#bbc7db",
+                    "tertiary": "#9cd1c5",
+                    "primary-container": "#232f3e",
+                    "surface-bright": "#373a3a",
+                    "on-tertiary-fixed-variant": "#194f46",
+                    "inverse-surface": "#e1e3e3",
+                    "on-secondary-container": "#eff4ff",
+                    "surface-dim": "#111414",
+                    "on-tertiary": "#003730",
+                    "surface-container-low": "#191c1c",
+                    "inverse-on-surface": "#2e3131",
+                    "on-primary-fixed": "#101c2b",
+                    "on-primary-fixed-variant": "#3c4858",
+                    "on-tertiary-fixed": "#00201b",
+                    "tertiary-container": "#00352e",
+                    "on-secondary-fixed": "#001d35",
+                    "surface": "#111414"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "code-sm": ["Geist"],
+                    "label-caps": ["Geist"],
+                    "display-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "code-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
-    @media screen and (max-width: 480px) {
-        .img-thumbnail{
-            width: 400px;
-            margin-left: -17px;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-    }
-</style>
-
-</head>
-
-<body data-spy="scroll" data-target="#resumeNavigationScrollSpy" data-offset="70" data-gr-c-s-loaded="true">    
-    
-    <div class="container">
+        .glass-card:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cloud-glow {
+            box-shadow: 0 0 40px -10px rgba(255, 140, 0, 0.25);
+        }
+        body {
+            background-color: #111414;
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111414;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333536;
+            border-radius: 4px;
+        }
         
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-3 resume-profile">
+        /* Premium Hero Background */
+        .hero-premium-bg {
+            background: radial-gradient(circle at 80% 40%, rgba(2, 116, 188, 0.12) 0%, rgba(17, 20, 20, 1) 60%),
+                        linear-gradient(180deg, rgba(17, 20, 20, 1) 0%, rgba(29, 32, 32, 0.95) 100%);
+        }
 
-                <img  src="./vinayak_profile.jpg" class="img-thumbnail" alt="Vinayak M. Zutti." width="250">
-                <p style="font-family: 'Times New Roman', Times, serif; font-size: 21pt;">Vinayak M. Zutti.</p>
-                <p style="font-family: 'Times New Roman', Times, serif; font-size: 15pt;">DevOps Automation Engineer</p>
+        /* Code Stream Animation */
+        @keyframes codeStream {
+            0% { transform: translateY(-20%); opacity: 0; }
+            20% { opacity: 0.08; }
+            80% { opacity: 0.08; }
+            100% { transform: translateY(120vh); opacity: 0; }
+        }
+        .code-stream-container {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        }
+        .code-snippet {
+            position: absolute;
+            font-family: 'Geist', monospace;
+            font-size: 11px;
+            color: #ff8c00;
+            white-space: nowrap;
+            animation: codeStream 20s linear infinite;
+            opacity: 0;
+            user-select: none;
+        }
 
-                <ul class="list-unstyled">
-                    <li>Location: Karnataka</li>
-                    <li>Email: <a href="mailto://vinoo160496@gmail.com">vinoo160496@gmail.com</a></li>                    
-                    <li>Tel: <a href="tel://+918904163401">+91 7848849869</a></li>
-                    
-                </ul>
+        /* Floating Tech Grid */
+        .tech-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        #threejs-canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
 
-                <ul class="list-unstyled">
-                    <li>
-                        LinkedIn: <a href="https://www.linkedin.com/in/vinayak-zutti-a505b1134/" target="_blank">@Vinayakz</a>
-                    </li>
-                    <li>
-                        Github: <a href="http://github.com/vinayakz" target="_blank">@vinayakz</a>
-                    </li> 
-                    <li>
-                        WordPress: <a href="https://profiles.wordpress.org/vinayakz/" target="_blank">@Vinayakz</a>
-                    </li>
-                    <li>
-                        WordPress Blog: <a href="https://vinayakz.wordpress.com/" target="_blank">@Vinayakz</a>
-                    </li>  
-                    <li>
-                        Facebook: <a href="https://www.facebook.com/vinoo160496" target="_blank">@Vinayakz</a>
-                    </li>   
-                    <li>
-                        Follow me: <a href="https://vinayakz.github.io/Follow_me.html" target="_blank">@Vinayakz</a>
-                    </li> 
-                    <!-- <li style="margin-top: 10px;"><a href="styles/Vinayak_Z_R_sum_.pdf" class="btn"><i class="fa fa-download"></i>  Download Resume</a></li> -->            
-                </ul>
-            </div>
-            <!-- /.resume-profile -->
+        /* Certification Badge */
+        .cert-badge {
+            animation: certFloat 8s ease-in-out infinite;
+            transition: filter 0.5s ease;
+        }
+        .cert-badge:hover {
+            filter: none;
+        }
+        @keyframes certFloat {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-18px) rotate(2deg); }
+        }
+        .cert-glow {
+            position: absolute;
+            inset: -30%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 140, 0, 0.18) 0%, transparent 70%);
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.08); }
+        }
+        .tech-logo {
+            filter: grayscale(1) opacity(0.7);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: help;
+        }
+        .tech-logo-github {
+            filter: grayscale(1) opacity(0.7) invert(1);
+        }
+        .tech-logo:hover {
+            transform: scale(1.15) translateY(-4px);
+        }
+        .tech-logo-aws:hover {
+            filter: drop-shadow(0 0 15px rgba(255, 153, 0, 0.7)) grayscale(0) opacity(1);
+        }
+        .tech-logo-docker:hover {
+            filter: drop-shadow(0 0 15px rgba(36, 150, 237, 0.7)) grayscale(0) opacity(1);
+        }
+        .tech-logo-k8s:hover {
+            filter: drop-shadow(0 0 15px rgba(50, 108, 229, 0.7)) grayscale(0) opacity(1);
+        }
+        .tech-logo-terraform:hover {
+            filter: drop-shadow(0 0 15px rgba(123, 66, 188, 0.7)) grayscale(0) opacity(1);
+        }
+        .tech-logo-github:hover {
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) grayscale(0) opacity(1) invert(1);
+        }
+        .tech-logo-grafana:hover {
+            filter: drop-shadow(0 0 15px rgba(244, 122, 32, 0.7)) grayscale(0) opacity(1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
 
-            <div class="col-xs-12 col-sm-8 col-md-6 resume-info">
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-16 overflow-hidden hero-premium-bg" id="home">
+<!-- Three.js Full Background Canvas -->
+<div id="threejs-canvas-container"></div>
+<!-- Code Stream Overlay -->
+<div class="code-stream-container" id="code-stream"></div>
+<div class="relative z-20 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Left: Text Content -->
+<div class="md:col-span-7 flex flex-col justify-center gap-6">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-container/40 border border-primary/20 text-primary rounded-full w-fit backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">V I N A Y A K Z.</span>
+</div>
+<div class="space-y-4">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-[1.1] tracking-tight">
+                    AWS DevOps <span class="text-secondary">Engineer</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    Architecting secure, highly-available, and cost-optimized cloud infrastructure with 5+ years of experience in enterprise-scale DevOps transformations and automated CI/CD pipelines.
+                </p>
+</div>
+<div class="flex flex-wrap gap-4 mt-4">
 
-                <section class="resume-info-section">
-                    <h2 id="introduction">Introduction</h2>
-                    <p class="lead text-justify" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font">
-                        I gained experience in Wordpress, HTML, CSS, MySQL, DevOps, Kubernetes, Docker, Terraform, Ansible, Jenkins, GitLab, AWS, Leadership Skills, and Soft skills.<br/><br/>
-                        I believe continuous learning and development to keep myself up-to-date and up-skilled is the solution to modern-day application development.
+</div>
+</div>
+<!-- Right: AWS Certification Badge -->
+<div class="hidden md:flex md:col-span-5 items-center justify-center">
+<div class="relative flex items-center justify-center">
+<div class="cert-glow"></div>
+<img
+  src="https://images.credly.com/images/bd31ef42-d460-493e-8503-39592aaf0458/image.png"
+  alt="AWS Certified Solutions Architect"
+  class="cert-badge relative w-96 h-96 object-contain"
+  title="AWS Certified Solutions Architect"
+/>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30 text-on-surface">
+<span class="material-symbols-outlined text-3xl">expand_more</span>
+</div>
+</header>
+<!-- Impact Stats -->
+<section class="py-12 bg-surface-container-low/30 border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="reveal">
+<h3 class="font-headline-md text-headline-md text-secondary">5+ Years</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-1">Experience</p>
+</div>
+<div class="reveal">
+<h3 class="font-headline-md text-headline-md text-secondary">11+</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-1">Deployments</p>
+</div>
+<div class="reveal">
+<h3 class="font-headline-md text-headline-md text-secondary">1</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-1">AWS Certified</p>
+</div>
+<div class="reveal">
+<h3 class="font-headline-md text-headline-md text-secondary">99.99%</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-1">Application Availability</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 md:py-32" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 reveal">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="aspect-square rounded-2xl overflow-hidden glass-card relative border-2 border-outline-variant/20">
+<img alt="Professional Profile" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgn1-dIo7OQ2TPE9bTPC9gsmoQoyTqYIiKPfbyBTYtg_jXSQZ1qLYxWLgKm3d_l5clYajgflLhv0HJvTwjwzvWyqPhms2_Qw2pSbFQDQGJHU-yOZfEcL9mI-aOr7gXKVkzXh5ik6QRcMMjpKQ8deH38jK7xYByy6WM5-yTmfNN5lIlK-un5W4rRsbxT9hHiXXX7t62QJMiAAi3rOGpQLbbJoUrMPVGHZP9XTQDV-1SOri0yL96gFQ2S_Yyzv5AiE5YI1pVuu9YBQw"/>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 reveal">
+<h2 class="font-headline-md text-headline-md text-secondary mb-6">Bridging the Gap Between Code and Infrastructure</h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
+<p>
+                        I specialize in engineering cloud ecosystems that are not just functional, but resilient and scalable. My journey in DevOps started with a passion for automation, evolving into a comprehensive mastery of AWS services and Cloud-Native paradigms.
                     </p>
-                </section>
+<p>
+                        Throughout my career, I've led infrastructure migrations, optimized cloud spend by over 40% for enterprise clients, and implemented security-first CI/CD pipelines that reduced deployment times from hours to minutes. I believe that infrastructure should be as agile as the code it supports.
+                    </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+<span class="font-body-md text-body-md">Cloud Migration Specialist</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-body-md text-body-md">DevSecOps Integration</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-body-md text-body-md">Infrastructure as Code</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="font-body-md text-body-md">Advanced Observability</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="py-24 bg-surface-container-low/20" id="experience">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
 
-                <section class="resume-info-section">
-                    <h2 id="education">Education</h2>
+  <!-- Section Header -->
+  <div class="mb-16 reveal">
+    <h2 class="font-display-lg text-display-lg text-on-surface mb-3">Career Progression</h2>
+    <div class="w-20 h-1 bg-secondary rounded-full"></div>
+  </div>
 
-                    <div class="resume-info-section-block">
-                        <h4>
-                            Master of Computer Application
-                            <small>- Rani Channamma University, Belagavi </small>
-                        </h4>
-                        <p>
-                            <small>
-                                2018 → 2020
-                            </small>
-                        </p>
-                        <p>
-                            I graduated from this course securing First class.
-                        </p>
-                    </div>
+  <!-- Timeline -->
+  <div class="relative">
+    <!-- Vertical Line -->
+    <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-outline-variant/30"></div>
 
-
-                    <div class="resume-info-section-block">
-                        <h4>
-                            Bachelor of Computer Application
-                            <small>- K.L.E Society's BCA College, Nipani </small>
-                        </h4>
-                        <p>
-                            <small>
-                                2014 → 2018
-                            </small>
-                        </p>
-
-                        <p>
-                            I graduated from this course securing First class.
-                        </p>
-                    </div>
-
-                    <div class="resume-info-section-block">
-                        <h4>
-                            PUC (CLASS XII)
-                            <small>- Karnataka Secondary Education Examination Board,bangalore </small>
-                        </h4>
-                        <p>
-                            <small>
-                                2013 → 2014
-                            </small>
-                        </p>
-
-                        <p>
-                            Secured Pass in Class XII.
-                        </p>
-                    </div>
-
-
-                    <div class="resume-info-section-block">
-                        <h4>
-                            CLASS X
-                            <small>- Karnataka Secondary Education Examination Board,bangalore </small>
-                        </h4>
-                        <p>
-                            <small>
-                                2011 → 2012
-                            </small>
-                        </p>
-
-                        <p>
-                            Secured Pass in Class 10<sup>th</sup>.
-                        </p>
-                    </div>
-
-                </section>
-
-                <section class="resume-info-section">
-                    <h2 id="experience">Experience</h2>
-                    <div class="resume-info-section-block">
-                        <h4 id="experience-web-designer-and-trainee-web-developer">
-                            DevOps Automation Engineer
-                            <small> – Immersivevision Technology Pvt. Ltd., Pune</small>
-                        </h4>
-                        <p>
-                            <small>
-                                Feb-2023 → Present
-                            </small>
-                        </p>
-
-                        <p>
-                            <ul style="text-align: justify; padding: 0; flex: auto; margin: 0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                                <li>Designed and maintained robust CI/CD pipelines using Jenkins, integrating with tools such as SonarǪube for code quality analysis, JFrog Artifactory for artifact management, and Git for version control.</li>
-                                <li>Implemented automated testing scripts within the pipeline, significantly improving software release quality and reliability.</li>
-                                <li>Reduced deployment times by 40% through pipeline optimization and parallelization of build processes.</li>
-                                <li>I created the Jenkins pipelines to automate the CICD process from scratch.</li>
-                                <li>Efficiently managed Docker services, including Images, Containers, Volumes, Networks, and Docker multi-stage builds to optimize container size and security.</li>
-                                <li>Managed the multiple servers with ansible playbook and reduce the time consumption.</li>
-                                <li>Automated the so many manual tasks in Jenkins.</li>
-                                <li>I developed a Docker file to create Docker images for various microservices, including the front-end and back-end, as per the development and testing team's requirements.</li>
-                                <li>Creating and Managing AMIs, Snapshots, Volumes, upgrades, and downgrades of AWS resources (CPU, Memory, and EBS)</li>
-                                <li>Server-related tasks like managing EC2 instances, creating AMIs, snapshots, changing instance types, Key Pairs, and creating new instances from AMIs.</li>
-                                <li>Designed and implemented Jenkins Shared Libraries to standardize and reuse CI/CD pipeline code across multiple projects, improving maintainability and reducing duplication by 40%.</li>
-                            </ul>                     
-                        </p>
-                        
-                    </div>
-                    
-                </section>
-                <section class="resume-info-section">
-                    <div class="resume-info-section-block">
-                        <h4 id="experience-web-designer-and-trainee-web-developer">
-                            Web Developer & Cloud Associate
-                            <small> – Globussoft Technologies Pvt. Ltd., Bangalore</small>
-                        </h4>
-                        <p>
-                            <small>
-                                April-2021 → Jan-2023
-                            </small>
-                        </p>
-
-                        <p>
-                            <ul style="text-align: justify; padding: 0; flex: auto; margin: 0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                                <li>Server-related tasks like managing EC2 instances, creating AMIs, snapshots, changing instance types, Key Pairs, and creating new instances from AMIs.</li>
-                                <li>Storage-related tasks like disk addition, increase, and decrease of existing disks using EBS have been worked on in the S3 bucket to store data.</li>
-                                <li>Network-related tasks like the setup of a VPCs, Subnets, Route tables, Internet Gateways, NAT, NACL, etc. for a new environment.</li>
-                                <li>Creating and managing AMIs, Snapshots, Volumes, upgrades, and downgrades of AWS resources (CPU, Memory, and EBS)</li>
-                                <li>I developed a Docker file to create Docker images for various microservices, including the front-end and back-end, as per the development and testing team's requirements.</li>
-                                <li>Designing and implementing new features and functionality.</li>
-                                <li>Planning and creating the website architecture.</li>
-                                <li>Good understanding page builder like elementor pro, WPBakery Page Builder And visual composer.</li>
-                                <li>Theme and Plugin development, plugin customization.</li>
-                            </ul>                     
-                        </p>
-                        
-                    </div>
-                    
-                </section>
-                <section class="resume-info-section">
-                    <h2 id="experience">Internship</h2>
-                    <div class="resume-info-section-block">
-                        <h4 id="experience-web-designer-and-trainee-web-developer">
-                            Web Developer & Cloud Associate
-                            <small> – Workflow Software. Sankeshwar, Karnataka.</small>
-                        </h4>
-                        <p>
-                            <small>
-                                Jan-2020 → July-2020
-                            </small>
-                        </p>
-
-                        <p>
-                            <ul style="text-align: justify; padding: 0; flex: auto; margin: 0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                                <li>Web-Developing Using PHP (Intern).</li>
-                                <li>Managing Source Code on GitHub.</li>
-                                <li>Maintaining the SDLC cycle using Jira.</li>
-                                <li>Network-related tasks like the setup of a VPC, subnet, Routing Table, Security Groups, and Elastic IP.</li>
-                                <li>Server-related tasks like managing EC2 instances, creating AMIs, snapshots, changing instance types, Key Pairs, and creating new instances from AMIs.</li>
-                            </ul>                     
-                        </p>
-                        
-                    </div>
-                    
-                </section>
-
-                <section class="resume-info-section">
-                    <h2 id="ProfessionalSummary">Professional Summary</h2>
-                    <div class="resume-info-section-block">
-
-                        <p>
-                            <ul style="text-align: justify; padding: 0; flex: auto; margin: 0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                                <li>Extensive experience setting up and maintaining continuous integration and continuous deployment pipelines using Jenkins.</li>
-                                <li>Experience with Docker multi-stage builds to optimize container size and security.</li>
-                                <li>Proficient in EC2 (virtual servers), S3 (object storage), RDS (relational databases), Lambda (serverless computing), VPC (networking), IAM (access management), CloudFront (CDN), Route 53 (DNS), EKS (container services), CloudWatch (monitoring), WAF, SNS and SES, AWS FARGATE and ECR.</li>
-                                <li>Proficient in Ansible for automating configuration management.</li>
-                                <li>Expert in Docker for containerization and Proficient in creating efficient, secure Docker files for various application types.</li>
-                                <li>Implemented Docker networking concepts, expertise in Docker volume management for persistent data.</li>
-                                <li>Expert in Kubernetes for container orchestration, including experience with AWS EKS (Cluster architecture and components, Pod lifecycle management and scheduling, Deployments, StatefulSets, DaemonSets, and Jobs, ConfigMaps and Secrets for configuration management, PV and PVC, Services, Ingress, and Network Policies for networking, RBAC for security, Helm for package management, HPA and Cluster Auto scaler for scaling)</li>
-                                <li>Advanced skills in Bash scripting for automation, task scheduling, and system management.</li>
-                                <li>Skilled in setting up comprehensive monitoring solutions using AWS CloudWatch, Prometheus, and Grafana.</li>
-                                <li>Practiced in Scrum methodologies, including sprint planning, daily stand-ups, and retrospectives.</li>
-                                <li>Designed and implemented Jenkins Shared Libraries to standardize and reuse CI/CD pipeline code across multiple projects, improving maintainability and reducing duplication by 40%.</li>
-                                <li>Collaborated with dev teams to modularize stages like build, test, deploy, and notify into reusable functions using Groovy.</li>
-                                <li>Configured SSL certificates, reverse proxy, and load balancing on AWS EC2 instances to ensure secure and high-availability deployments.</li>
-                                <li>Set up virtual hosts to host multiple websites on a single server using Apache/Nginx.</li>
-                                <li>Implemented a backup server with failover mechanisms to maintain service continuity during system failures.</li>
-                            </ul>                     
-                        </p>
-                        
-                    </div>
-                    
-                </section>
-
-
-
-                <section class="resume-info-section tools-and-tech">
-                    <h2 id="tools-and-technologies">Tools &amp; Technologies</h2>
-
-                    <div class="resume-info-section-block">
-                        <ul class="list-unstyled tag-list">                            
-                            <li>DeOps</li>
-                            <li>Git</li>
-                            <li>MySQL</li>
-                            <li>Github</li>
-                            <li>Linux</li>                           
-                            <li>Jenkins</li>                           
-                            <li>Docker</li>                           
-                            <li>Ansible</li>                           
-                            <li>Terraform</li>                           
-                            <li>GitLab</li>                           
-                            <li>K8s</li>                           
-                            <li>Prometheus</li>                           
-                            <li>Grafana</li>                           
-                            <li>JFrog Artifactory</li>                           
-                            <li>Bash</li>                           
-                            <li>Groovy</li>                           
-                            <li>ArgoCD</li>                           
-                            <li>Helm</li>
-                            <li>Trivy</li>
-                            <li>Sonarqube</li>
-                            <li>QWASP Dependency Check</li>
-
-                        </ul>
-                    </div>
-                    
-                </section>
-                
-                <section class="resume-info-section">
-                    <h2 id="PersonalityTraits">Personality Traits</h2>
-                    <ul class="list-unstyled tag-list">
-                        <li>Possess team player attitude</li> 
-                        <li>Highly motivated and eager to learn new things.</li>   
-                        <li>Able to handle the conflict situation</li> 
-                        <li>Team work and flexibility</li> 
-                        <li>Comfortable working independently</li> 
-                        <li>Learning potential</li> 
-                    </ul>
-
-                </section>
-
-
-            </div>
-            <!-- /.resume-info -->
-
-            <div id="resumeNavigationScrollSpy" class="col-md-3">
-                <ul style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="nav nav nav-pills nav-stacked resume-navigation hidden-print hidden-sm hidden-xs affix-top" data-spy="affix" data-offset-top="0">
-                   
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#introduction">Introduction</a>
-                    </li>
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#education">Education</a>
-                    </li>
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#experience">Experience</a>
-                        
-                    </li>
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#ACADEMICPROJECTS">Academics Project</a>
-                    </li>
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#tools-and-technologies">Tools &amp; Technologies</a>
-                    </li>
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#PersonalityTraits">Personality Traits</a>
-                    </li>
-                    <li>
-                        <a style="border-radius: 10px; color: #89c743;" href="#ProfessionalSummary">Professional Summary</a>
-                    </li>
-                    <li>
-                        <a style="border-radius: 15px; color: #fff;" class="btn" href="Follow_me.html">Follow me</a>
-                    </li>
-                   <!-- <li>
-
-                        <a style="border-radius: 10px; color: #89c743;" href="logout.php">Logout</a>
-                    </li> -->
-                        
-                </ul>
-                <!-- /.resume-navigation -->
-            </div> <!-- /#resumeNavigationScrollSpy -->
+    <!-- Item 1 -->
+    <div class="relative flex gap-10 mb-14 reveal">
+      <!-- Icon -->
+      <div class="relative z-10 flex-shrink-0 w-12 h-12 bg-primary-container border-4 border-background rounded-full flex items-center justify-center shadow-lg">
+        <span class="material-symbols-outlined text-secondary" style="font-size:20px;">settings_suggest</span>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 glass-card rounded-2xl bg-surface/50 backdrop-blur overflow-hidden" style="padding:0;">
+        <div style="height:4px; background: linear-gradient(to right, #ec4899, #f97316);"></div>
+        <div class="p-8">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <h4 class="font-headline-md text-headline-md text-on-surface">AWS DevOps Engineer</h4>
+          <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs text-secondary font-semibold">2023 – Present</span>
         </div>
-        <!-- /.row -->
-        <div class="footer" style="position:static; left: 0; bottom: -2958px; width: 100%; font-style: italic;">&copy;2025 Vinayak Zutti.</div>
+        <p class="font-label-caps text-label-caps text-secondary uppercase mb-4 tracking-widest">Immersivevision Technology Pvt. Ltd.</p>
+        <p class="text-on-surface-variant text-body-md leading-relaxed" style="text-align: justify;">As a AWS DevOps Engineer at Immersive Technology, I play a key role in managing cloud infrastructure, automating deployment pipelines, and ensuring reliable software delivery across development, staging, and production environments. I work closely with developers, QA teams, and cloud architects to maintain a scalable, secure, and cost-effective infrastructure on AWS.</p>
+        <br/>
+        <ul class="space-y-2 mb-4">
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Architected and managed multi-environment AWS infrastructure (dev, staging, prod) with high availability across multiple regions.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Built and maintained CI/CD pipelines using Jenkins and GitHub Actions, reducing deployment time by 60%.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Containerized applications using Docker and orchestrated workloads with Kubernetes (EKS), improving scalability and resource utilization.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Automated infrastructure provisioning with Terraform and Ansible, enforcing Infrastructure as Code across all environments.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Integrated security scanning tools (SonarQube, Trivy) into pipelines for continuous vulnerability detection and compliance.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Set up monitoring and alerting using Prometheus and Grafana dashboards, achieving 99.9% uptime SLA.</li>
+        </ul>
+        <p class="font-label-caps text-label-caps text-secondary uppercase mb-4 tracking-widest">Technologies Used:</p>
+         
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">AWS</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Jenkins</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">GitHub Actions</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Docker</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">kubernetes</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Ansible</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Terraform</span>
+        <br><br>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">CloudFormation</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Python</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Shell Scripting</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Github</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">SonarQube</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Trivy</span>
+        <br><br>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">AWS CloudFront</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Prometheus</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Grafana</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">React Js</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Nginx</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Apache</span>
+
+        </div><!-- /p-8 -->
+      </div>
     </div>
-    <!-- /.Container -->
-    
 
-    <!-- Javascript -->
-    <script type="text/javascript" src="styles/app.js"></script>
-    <!-- /Javscript -->
-    
-    
-       <!--  <script type="text/javascript">
-            alert("Page is restricted. Please login to continue.");
-            window.location.href="index.php";
-        </script>
- -->
-</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>
+    <!-- Item 2 -->
+    <div class="relative flex gap-10 mb-14 reveal">
+      <!-- Icon -->
+      <div class="relative z-10 flex-shrink-0 w-12 h-12 bg-primary-container border-4 border-background rounded-full flex items-center justify-center shadow-lg">
+        <span class="material-symbols-outlined text-secondary" style="font-size:20px;">cloud</span>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 glass-card rounded-2xl bg-surface/50 backdrop-blur overflow-hidden" style="padding:0;">
+        <div style="height:4px; background: linear-gradient(to right, #ec4899, #f97316);"></div>
+        <div class="p-8">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <h4 class="font-headline-md text-headline-md text-on-surface">Web Developer & Cloud Associate</h4>
+          <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs text-secondary font-semibold">2021 – 2023</span>
+        </div>
+        <p class="font-label-caps text-label-caps text-secondary uppercase mb-4 tracking-widest">Globussoft Technologies Pvt. Ltd.</p>
+        <p class="text-on-surface-variant text-body-md leading-relaxed" style="text-align: justify;">Developed and maintained multiple client projects, focusing on modern web technologies and user experience optimization.</p>
+        <ul class="space-y-2 mt-3 mb-4">
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Designed and launched 8+ web applications on AWS cloud infrastructure, utilizing EC2, S3, RDS, and CloudFront, resulting in 40% faster page load times and supporting 50K+ monthly active users.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Managed deployment pipelines and version control workflows using Git and basic CI/CD tooling for smooth release cycles.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Gained hands-on exposure to cloud fundamentals — S3 static hosting, EC2 provisioning, IAM role management, and cost monitoring.</li>
+          <li class="flex items-start gap-2 text-on-surface-variant text-body-md"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>Collaborated with cross-functional teams to deliver responsive, performance-optimized front-end solutions using React.js.</li>
+        </ul>
 
-</html>
+        <p class="font-label-caps text-label-caps text-secondary uppercase mb-4 tracking-widest">Technologies Used:</p>
+         
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">AWS</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Jenkins</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Docker</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Terraform</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">Wordpress</span>
+        <span class="px-3 py-0.5 bg-secondary/10 border border-secondary/30 rounded-full text-xs  font-semibold">React Js</span>
+        <br><br>
+        </div><!-- /p-8 -->
+      </div>
+    </div>
 
+
+  </div>
+</div>
+</section>
+<!-- Skills Bento Grid -->
+<section class="py-24 md:py-32" id="skills">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 reveal">
+<h2 class="font-display-lg text-headline-md text-on-surface mb-2">Technical Core</h2>
+<p class="text-on-surface-variant">Comprehensive mastery across the full-stack cloud ecosystem and automation lifecycle</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Cloud Platforms -->
+<div class="md:col-span-4 glass-card rounded-2xl p-6 flex flex-col reveal bg-surface/50 backdrop-blur">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">cloud</span>
+<h3 class="font-headline-md text-on-surface">Cloud Platforms</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-body-md font-semibold">Amazon Web Services (AWS)</span>
+<span class="text-secondary font-code-sm">95%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[95%] h-full bg-secondary shadow-[0_0_10px_rgba(255,140,0,0.5)]"></div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-full text-xs text-secondary">Multi-Region</span>
+<span class="px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-full text-xs text-secondary">Hybrid Cloud</span>
+</div>
+</div>
+</div>
+<!-- DevOps Tools -->
+<div class="md:col-span-8 glass-card rounded-2xl p-6 flex flex-col reveal bg-surface/50 backdrop-blur">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">terminal</span>
+<h3 class="font-headline-md text-on-surface">DevOps &amp; Automation</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2">
+<p class="text-label-caps text-on-surface-variant uppercase">CI/CD</p>
+<ul class="space-y-1 text-body-md">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Jenkins</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>GitHub Actions</li>
+</ul>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-label-caps text-on-surface-variant uppercase">Containers</p>
+<ul class="space-y-1 text-body-md">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Docker</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Kubernetes</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Helm</li>
+</ul>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-label-caps text-on-surface-variant uppercase">IaC</p>
+<ul class="space-y-1 text-body-md">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Terraform</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Ansible</li>
+</ul>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-label-caps text-on-surface-variant uppercase">Proficiency</p>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden mt-2">
+<div class="w-[90%] h-full bg-secondary"></div>
+</div>
+<span class="text-xs text-on-surface-variant">Expert Level</span>
+</div>
+</div>
+</div>
+<!-- AWS Services -->
+<div class="md:col-span-9 glass-card rounded-2xl p-6 reveal bg-surface/50 backdrop-blur">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">hub</span>
+<h3 class="font-headline-md text-on-surface">AWS Service Deep-Dive</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+<div>
+<p class="text-label-caps text-secondary mb-2">Compute</p>
+<p class="text-body-md text-on-surface-variant">EC2, Lambda, ECS, EKS, Auto Scaling</p>
+</div>
+<div>
+<p class="text-label-caps text-secondary mb-2">Network &amp; Content</p>
+<p class="text-body-md text-on-surface-variant">VPC, Route53, CloudFront, ALB/NLB</p>
+</div>
+<div>
+<p class="text-label-caps text-secondary mb-2">Storage &amp; DB</p>
+<p class="text-body-md text-on-surface-variant">S3, RDS, DynamoDB, ElastiCache</p>
+</div>
+<div>
+<p class="text-label-caps text-secondary mb-2">Security &amp; Ops</p>
+<p class="text-body-md text-on-surface-variant">IAM, CloudWatch, CloudTrail, KMS</p>
+</div>
+</div>
+</div>
+<!-- Monitoring -->
+<div class="md:col-span-3 glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-surface/50 backdrop-blur">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">monitoring</span>
+<h3 class="font-headline-md text-on-surface">Observability</h3>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-2 bg-surface-container-high/40 rounded-lg border border-outline-variant/10">
+<span class="text-body-md">Prometheus</span>
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-high/40 rounded-lg border border-outline-variant/10">
+<span class="text-body-md">Grafana</span>
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-secondary"></div>
+</div>
+<p class="text-xs text-on-surface-variant mt-2">Advanced Metrics &amp; Alerting</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Terminal/Documentation CTA Section -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="glass-card rounded-xl overflow-hidden reveal">
+<div class="bg-surface-container-highest px-4 py-2 flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></div>
+<span class="ml-4 font-code-sm text-code-sm text-on-surface-variant">infrastructure-as-code.tf</span>
+</div>
+<div class="p-8 font-code-sm text-code-sm text-on-surface bg-background">
+<pre><code><span class="text-secondary">resource</span> "engineer" "vinayakz." {
+  <span class="text-secondary">role</span>           = "AWS DevOps Engineer"
+  <span class="text-secondary">instance_type</span> = "t3.large"
+
+  <span class="text-secondary">expertise</span> = [
+    "AWS",
+    "Terraform",
+    "Kubernetes",
+    "Docker",
+    "Jenkins",
+    "GitHub",
+    "CI/CD"
+  ]
+  mission = "Automate, Optimize, Scale"
+}
+
+output "status" {
+  value = "Turning coffee into cloud infrastructure since 2020 ☕🚀"
+}
+
+<span class="text-tertiary-fixed-dim">// Build it. Automate it. Monitor it. Scale it.</span></code></pre>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Blogs Section -->
+<section class="py-24 bg-surface-container-low/20 border-t border-outline-variant/10" id="blogs">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+  <!-- Header -->
+  <div class="mb-12 reveal">
+    <h2 class="font-display-lg text-display-lg text-on-surface mb-3">Latest Blogs</h2>
+    <div class="w-20 h-1 rounded-full" style="background: linear-gradient(to right, #ec4899, #f97316);"></div>
+    <p class="text-on-surface-variant text-body-lg mt-4">Thoughts on cloud infrastructure, DevOps practices and lessons from the field.</p>
+  </div>
+  <!-- Blog Cards Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- Blog Card 1 -->
+    <a href="#" class="group block glass-card rounded-2xl overflow-hidden bg-surface/50 backdrop-blur hover:border-secondary/30 transition-all duration-300 reveal">
+      <div style="height:3px; background: linear-gradient(to right, #ec4899, #f97316);"></div>
+      <div class="p-6 flex flex-col h-full">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary">Kubernetes</span>
+          <span class="text-xs text-on-surface-variant ml-auto">Jun 2025</span>
+        </div>
+        <h4 class="font-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors leading-snug">Zero-Downtime Deployments with Kubernetes Rolling Updates</h4>
+        <p class="text-on-surface-variant text-body-md leading-relaxed flex-1">A deep dive into achieving zero-downtime production releases using K8s rolling update strategies, readiness probes, and PodDisruptionBudgets.</p>
+        <div class="flex items-center gap-2 mt-5 text-secondary text-sm font-semibold">
+          Read more <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Blog Card 2 -->
+    <a href="#" class="group block glass-card rounded-2xl overflow-hidden bg-surface/50 backdrop-blur hover:border-secondary/30 transition-all duration-300 reveal">
+      <div style="height:3px; background: linear-gradient(to right, #ec4899, #f97316);"></div>
+      <div class="p-6 flex flex-col h-full">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary">Terraform</span>
+          <span class="text-xs text-on-surface-variant ml-auto">May 2025</span>
+        </div>
+        <h4 class="font-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors leading-snug">Managing Multi-Region AWS Infrastructure with Terraform Workspaces</h4>
+        <p class="text-on-surface-variant text-body-md leading-relaxed flex-1">How to structure Terraform modules and workspaces for clean, reusable multi-region AWS deployments without code duplication.</p>
+        <div class="flex items-center gap-2 mt-5 text-secondary text-sm font-semibold">
+          Read more <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Blog Card 3 -->
+    <a href="#" class="group block glass-card rounded-2xl overflow-hidden bg-surface/50 backdrop-blur hover:border-secondary/30 transition-all duration-300 reveal">
+      <div style="height:3px; background: linear-gradient(to right, #ec4899, #f97316);"></div>
+      <div class="p-6 flex flex-col h-full">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary">CI/CD</span>
+          <span class="text-xs text-on-surface-variant ml-auto">Apr 2025</span>
+        </div>
+        <h4 class="font-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors leading-snug">Building a Secure DevSecOps Pipeline with GitHub Actions & Trivy</h4>
+        <p class="text-on-surface-variant text-body-md leading-relaxed flex-1">Step-by-step guide to embedding container image scanning, SAST with SonarQube, and secret detection directly into your GitHub Actions workflow.</p>
+        <div class="flex items-center gap-2 mt-5 text-secondary text-sm font-semibold">
+          Read more <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+</section>
+
+<!-- Let's Connect Section -->
+<section class="py-16 bg-background border-t border-outline-variant/10" id="connect">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+  <div class="glass-card rounded-2xl overflow-hidden reveal">
+    <!-- Gradient top bar -->
+    <div style="height:3px; background: linear-gradient(to right, #ec4899, #f97316);"></div>
+    <div class="p-8">
+      <!-- Header -->
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(255,140,0,0.15); border: 1px solid rgba(255,140,0,0.3);">
+          <span class="material-symbols-outlined text-secondary" style="font-size:20px; font-variation-settings:'FILL' 1;">mail</span>
+        </div>
+        <div>
+          <h3 class="font-headline-md text-headline-md text-on-surface leading-tight">Let's Connect</h3>
+          <p class="text-on-surface-variant text-body-md">Get in Touch</p>
+        </div>
+      </div>
+      <!-- Link Buttons -->
+      <div class="flex flex-wrap gap-3">
+        <a href="https://github.com/vinayakz" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-outline-variant/40 bg-surface-container/60 text-on-surface hover:border-secondary/50 hover:bg-surface-container-high transition-all text-body-md font-semibold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/vinayak-zutti/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-outline-variant/40 bg-surface-container/60 text-on-surface hover:border-secondary/50 hover:bg-surface-container-high transition-all text-body-md font-semibold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-low border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-2">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 V I N A Y A K Z. All rights reserved.</p>
+</div>
+<!-- <div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com/vinayakz" target="_blank">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="linkedin.com/in/vinayak-zutti/" target="_blank">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://www.credly.com/users/vinayak-m-ZUTTI/badges#credly" target="_blank">AWS Certified</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Email</a>
+</div> -->
+</div>
+</footer>
+<script>    // Three.js Network Animation
+    (function() {
+      const container = document.getElementById('threejs-canvas-container');
+      if (!container) return;
+
+      let width = container.clientWidth;
+      let height = container.clientHeight;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const group = new THREE.Group();
+      scene.add(group);
+
+      // Starfield / Particle Dust Background
+      const starCount = 200;
+      const starGeometry = new THREE.BufferGeometry();
+      const starPositions = new Float32Array(starCount * 3);
+      for(let i = 0; i < starCount * 3; i += 3) {
+        starPositions[i] = (Math.random() - 0.5) * 15;
+        starPositions[i+1] = (Math.random() - 0.5) * 15;
+        starPositions[i+2] = (Math.random() - 0.5) * 10 - 5;
+      }
+      starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+      const starMaterial = new THREE.PointsMaterial({
+        color: 0xbbc7db,
+        size: 0.04,
+        transparent: true,
+        opacity: 0.20
+      });
+      const stars = new THREE.Points(starGeometry, starMaterial);
+      group.add(stars);
+
+      const techNodes = [
+        { name: 'AWS', color: 0xFF9900, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+        { name: 'Docker', color: 0x2496ED, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+        { name: 'Kubernetes', color: 0x326CE5, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg' },
+        { name: 'Terraform', color: 0x7B42BC, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg' },
+        { name: 'GitHub', color: 0xFFFFFF, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' },
+        { name: 'Grafana', color: 0xF47A20, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg' },
+        { name: 'Jenkins', color: 0xD24939, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg' },
+        { name: 'Ansible', color: 0xEE0000, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg' },
+        { name: 'AWS VPC', color: 0x00A0E0, iconUrl: 'https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v23.0/dist/NetworkingContentDelivery/VirtualPrivateCloud.png' },
+        { name: 'AWS CloudFront', color: 0xFF9900, iconUrl: 'https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v23.0/dist/NetworkingContentDelivery/CloudFront.png' },
+        { name: 'Prometheus', color: 0xE6522C, iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg' }
+      ];
+
+      // Helper function to load texture and process transparency/colorization
+      function loadTexture(url) {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const texture = new THREE.CanvasTexture(canvas);
+        
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = url;
+        img.onload = () => {
+          canvas.width = img.width || 128;
+          canvas.height = img.height || 128;
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          
+          // Apply color adjustments for dark theme
+          if (url.includes('github') || url.includes('amazonwebservices')) {
+            const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imgData.data;
+            for (let i = 0; i < data.length; i += 4) {
+              if (data[i] < 130 && data[i+1] < 130 && data[i+2] < 130 && data[i+3] > 50) {
+                data[i] = 255;
+                data[i+1] = 255;
+                data[i+2] = 255;
+              }
+            }
+            ctx.putImageData(imgData, 0, 0);
+          }
+          texture.needsUpdate = true;
+        };
+        return texture;
+      }
+
+      const nodes = [];
+      const radius = 5.5;
+
+      techNodes.forEach((tech, i) => {
+        const phi = Math.acos(-1 + (2 * i) / techNodes.length);
+        const theta = Math.sqrt(techNodes.length * Math.PI) * phi;
+
+        const x = radius * Math.cos(theta) * Math.sin(phi);
+        const y = radius * Math.sin(theta) * Math.sin(phi);
+        const z = radius * Math.cos(phi);
+
+        // Core Node (Sprite with Texture)
+        const map = loadTexture(tech.iconUrl);
+        const material = new THREE.SpriteMaterial({ 
+          map: map,
+          transparent: true,
+          opacity: 0.30
+        });
+        const sprite = new THREE.Sprite(material);
+        sprite.position.set(x, y, z);
+        sprite.scale.set(1.1, 1.1, 1.0);
+        group.add(sprite);
+
+        // Glow Layer
+        const glowGeo = new THREE.SphereGeometry(0.32, 16, 16);
+        const glowMat = new THREE.MeshBasicMaterial({ 
+          color: tech.color, 
+          transparent: true, 
+          opacity: 0.06 
+        });
+        const glowMesh = new THREE.Mesh(glowGeo, glowMat);
+        glowMesh.position.set(x, y, z);
+        group.add(glowMesh);
+
+        nodes.push({
+          mesh: sprite,
+          glow: glowMesh,
+          originalPos: new THREE.Vector3(x, y, z),
+          phase: Math.random() * Math.PI * 2
+        });
+      });
+
+      // Connections
+      const lineMaterial = new THREE.LineBasicMaterial({ 
+        color: 0x0274bc, 
+        transparent: true, 
+        opacity: 0.08 
+      });
+      
+      const lineGeom = new THREE.BufferGeometry();
+      const line = new THREE.LineSegments(lineGeom, lineMaterial);
+      group.add(line);
+
+      // Data Packets traveling along network lines
+      const packets = [];
+      const numPackets = 12;
+      for (let k = 0; k < numPackets; k++) {
+        const startIdx = Math.floor(Math.random() * nodes.length);
+        let endIdx = Math.floor(Math.random() * nodes.length);
+        while (endIdx === startIdx) {
+          endIdx = Math.floor(Math.random() * nodes.length);
+        }
+        
+        const packetGeo = new THREE.SphereGeometry(0.045, 8, 8);
+        const packetMat = new THREE.MeshBasicMaterial({
+          color: 0xff8c00,
+          transparent: true,
+          opacity: 0.55
+        });
+        const packetMesh = new THREE.Mesh(packetGeo, packetMat);
+        group.add(packetMesh);
+        
+        packets.push({
+          mesh: packetMesh,
+          startNode: nodes[startIdx],
+          endNode: nodes[endIdx],
+          progress: Math.random(),
+          speed: 0.003 + Math.random() * 0.005
+        });
+      }
+
+      camera.position.z = 8;
+      camera.position.x = 0; // Centered - full background
+
+      // Mouse Parallax variables
+      let mouseX = 0, mouseY = 0;
+      let targetMouseX = 0, targetMouseY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        targetMouseX = (e.clientX / window.innerWidth - 0.5) * 0.8;
+        targetMouseY = (e.clientY / window.innerHeight - 0.5) * 0.8;
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        const time = Date.now() * 0.001;
+
+        // Smooth Parallax interpolation
+        mouseX += (targetMouseX - mouseX) * 0.05;
+        mouseY += (targetMouseY - mouseY) * 0.05;
+
+        // Apply automatic rotation + mouse tilt
+        group.rotation.y = time * 0.06 + mouseX;
+        group.rotation.x = time * 0.03 + mouseY;
+
+        const linePositions = [];
+        nodes.forEach((node, i) => {
+          const bounce = Math.sin(time + node.phase) * 0.25;
+          node.mesh.position.copy(node.originalPos).add(new THREE.Vector3(0, bounce, 0));
+          node.glow.position.copy(node.mesh.position);
+          
+          // Pulsate node glow layer - very subtle for faded bg
+          const pulseScale = 1.0 + Math.sin(time * 2.5 + node.phase) * 0.10;
+          node.glow.scale.set(pulseScale, pulseScale, pulseScale);
+          node.glow.material.opacity = 0.04 + Math.sin(time * 3.5 + node.phase) * 0.02;
+
+          // Connect to some other nodes for a mesh look
+          for(let j = i + 1; j < nodes.length; j++) {
+            linePositions.push(node.mesh.position.x, node.mesh.position.y, node.mesh.position.z);
+            linePositions.push(nodes[j].mesh.position.x, nodes[j].mesh.position.y, nodes[j].mesh.position.z);
+          }
+        });
+
+        lineGeom.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+        lineGeom.attributes.position.needsUpdate = true;
+
+        // Animate packets
+        packets.forEach(packet => {
+          packet.progress += packet.speed;
+          if (packet.progress >= 1.0) {
+            packet.progress = 0.0;
+            packet.startNode = packet.endNode;
+            let newEnd = Math.floor(Math.random() * nodes.length);
+            while (newEnd === nodes.indexOf(packet.startNode)) {
+              newEnd = Math.floor(Math.random() * nodes.length);
+            }
+            packet.endNode = nodes[newEnd];
+            packet.speed = 0.003 + Math.random() * 0.005;
+          }
+          
+          const pStart = packet.startNode.mesh.position;
+          const pEnd = packet.endNode.mesh.position;
+          packet.mesh.position.lerpVectors(pStart, pEnd, packet.progress);
+        });
+
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        width = container.clientWidth;
+        height = container.clientHeight;
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+      });
+    })();
+
+    // Code Stream Animation Generator with syntax highlighting
+    const snippets = [
+        "import boto3; client = boto3.client('ec2')", // AWS
+        "docker build -t devops-app:latest .", // Docker
+        "kubectl rollout status deployment/web-service", // Kubernetes
+        "terraform apply -auto-approve", // Terraform
+        "git push origin main", // GitHub
+        "grafana-cli plugins install grafana-piechart-panel", // Grafana
+        "jenkins-cli.jar build deploy-pipeline -s http://localhost", // Jenkins
+        "ansible-playbook -i inventory site.yml", // Ansible
+        "resource 'aws_vpc' 'main' { cidr_block = '10.0.0.0/16' }", // AWS VPC
+        "resource 'aws_cloudfront_distribution' 'cdn' { enabled = true }", // AWS CloudFront
+        "prometheus_query: rate(http_requests_total[5m])" // Prometheus
+    ];
+
+    function highlightSnippet(text) {
+        return text
+            .replace(/(import |resource |apply |build |push |rollout status|plugins install)/g, '<span class="text-tertiary-fixed-dim font-semibold">$1</span>')
+            .replace(/(kubectl|terraform|docker|ansible-playbook|git|prometheus_query|aws|boto3|client|jenkins-cli.jar|grafana-cli)/g, '<span class="text-secondary">$1</span>')
+            .replace(/('.*?'|".*?")/g, '<span class="text-primary">$1</span>')
+            .replace(/(#.*|\/\/.*)/g, '<span class="text-on-primary-fixed-variant">$1</span>');
+    }
+
+    function createSnippet() {
+        const container = document.getElementById('code-stream');
+        if (!container) return;
+        const snippet = document.createElement('div');
+        snippet.className = 'code-snippet';
+        snippet.innerHTML = highlightSnippet(snippets[Math.floor(Math.random() * snippets.length)]);
+        snippet.style.left = (Math.random() * 80 + 10) + '%'; // Keep away from extreme edges
+        snippet.style.animationDuration = (15 + Math.random() * 10) + 's';
+        snippet.style.fontSize = (10 + Math.random() * 4) + 'px';
+        
+        container.appendChild(snippet);
+        setTimeout(() => snippet.remove(), 25000);
+    }
+    // Subtle frequency
+    setInterval(createSnippet, 1200);;
+
+    // Scroll reveal animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body></html>
